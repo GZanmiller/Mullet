@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mullete</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Mullete</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<header>
+			<img src="logo.png" alt="logo" />
+			<a class="menu button" href="#">One</a>
+			<a class="menu button" href="#">Two</a>
+			<a class="menu button" href="#">Three</a>
+		</header>
 
-<%= yield %>
-
-</body>
+		<%= yield %>
+		<footer>
+			<p>Footer Area</p>
+		</footer>
+	</body>
 </html>
