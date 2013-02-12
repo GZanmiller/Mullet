@@ -1,2 +1,4 @@
 class StaticPageController < ApplicationController
+
 end
+
