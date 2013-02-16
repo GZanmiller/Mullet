@@ -1,10 +1,16 @@
-		<div class="tile 1">Tile 1</div>
-		<div class="tile 2">Tile 2</div>
-		<div class="tile 3">Tile 3</div>
-		<div class="tile 4">Tile 4</div>
-		<div class="tile 5">Tile 5</div>
-		<div class="tile 6">Tile 6</div>
-		<div class="tile 7">Tile 7</div>
-		<div class="tile 8">Tile 8</div>
-		<div class="tile 9">Tile 9</div>
-		<div class="tile 10">Tile 10</div>
+<br />
+<%= form_for :user, :url => root_path(@user) do |f| %>
+	<%= f.label 'Enter your Twitter username' %>
+	<%= f.text_field :name %>
+	<%= f.submit "Submit" %>
+<% end %>
+
+<% if @user.name != nil %>
+	<h1><%= Twitter.user(@user.name).name %></h1>
+	<br />
+	<div class="tile 1">
+		<% Twitter.user_timeline(@user.name, :count => 10).each do |t| %>
+			<%= t.text %><br />
+		<% end %>
+	</div>
+<% end %>
