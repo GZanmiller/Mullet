@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'twitter', '4.5.0'
 
-group :development do
+group :development, :test do
 	gem 'sqlite3'
 end
 

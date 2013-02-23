@@ -1,3 +1,58 @@
 // Place all the styles related to the static_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#username_form {
+	padding:0 20px;
+	font-family: 'Galindo', cursive;
+}
+
+#input_label {
+	font-size:20px;
+}
+
+#input_area {
+	border-radius:5px;
+	height:12px;
+	width:180px;
+	padding:5px;
+	margin-top:-5px;
+	margin-left:5px;
+	margin-right:5px;
+	font-family: 'McLaren', cursive;
+	font-size: 17px;
+}
+
+#submit_btn {
+	height:25px;
+	background-color: #c14a35;
+	width:80px;
+	border-radius:5px;
+	border:3px solid #36271a;
+	font-family: 'McLaren', cursive;
+	font-size:16px;
+	cursor: pointer;
+}
+
+#submit_btn:hover {
+	background-color: #e07966;
+}
+
+#submit_btn:active {
+	background-color: #7d2211;
+}
+
+#user_twitter_data {
+	margin-top:30px;
+	padding:0 20px;
+	text-align:center;
+}
+
+#username {
+	font-family: 'Galindo', cursive;
+}
+
+.tweet {
+	font-family: 'McLaren', cursive;
+	margin-bottom:10px;
+}

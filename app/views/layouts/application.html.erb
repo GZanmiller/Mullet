@@ -3,20 +3,25 @@
 	<head>
 	  <title>Mullete</title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <link href='http://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=McLaren' rel='stylesheet' type='text/css'>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<header>
-			<img src="logo.png" alt="logo" />
-			<a class="menu button" href="#">One</a>
-			<a class="menu button" href="#">Two</a>
-			<a class="menu button" href="#">Three</a>
-		</header>
+		<div id="container">
+			<header>
+				<div id="logo"><%= image_tag("mullet-logo.png", :alt=> "Mullet", :id => "logo_image") %></div>
+				<div id="menu_buttons">
+					<a class="menu button" href="#">One</a>
+					<a class="menu button" href="#">Two</a>
+					<a class="menu button" href="#">Three</a>
+				</div>
+			</header>
 
-		<%= yield %>
-		<footer>
-			<p>Footer Area</p>
-		</footer>
+			<div id="body"><%= yield %></div>
+		</div>
+
+		<footer></footer>
 	</body>
 </html>

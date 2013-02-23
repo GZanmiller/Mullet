@@ -1,16 +1,19 @@
 <br />
-<%= form_for :user, :url => root_path(@user) do |f| %>
-	<%= f.label 'Enter your Twitter username' %>
-	<%= f.text_field :name %>
-	<%= f.submit "Submit" %>
-<% end %>
-
-<% if @user.name != nil %>
-	<h1><%= Twitter.user(@user.name).name %></h1>
-	<br />
-	<div class="tile 1">
-		<% Twitter.user_timeline(@user.name, :count => 10).each do |t| %>
-			<%= t.text %><br />
-		<% end %>
-	</div>
-<% end %>
+<div id="username_form">
+	<%= form_for :user, :url => root_path(@user) do |f| %>
+		<%= f.label 'Enter your Twitter username:', id: "input_label" %>
+		<%= f.text_field :name, id: "input_area" %>
+		<%= f.submit "Submit", id: "submit_btn" %>
+	<% end %>
+</div>
+<div id="user_twitter_data">
+	<% if @user.name != nil %>
+		<h1 id="username"><%= Twitter.user(@user.name).name %></h1>
+		<br />
+		<div class="tile 1">
+			<% Twitter.user_timeline(@user.name, :count => 10).each do |t| %>
+				<div class="tweet"><%= t.text %><br /></div>
+			<% end %>
+		</div>
+	<% end %>
+</div>
